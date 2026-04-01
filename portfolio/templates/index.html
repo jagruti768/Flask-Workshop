@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Hi, I'm <span class="highlight">{{ name }}</span> 👋</h1>
+    <p class="bio">{{ bio }}</p>
+
+    <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-tags">
+            {% for skill in skills %}
+                <span class="tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="{{ url_for('projects') }}" class="btn">See My Projects →</a>
+</section>
+
+{% endblock %}

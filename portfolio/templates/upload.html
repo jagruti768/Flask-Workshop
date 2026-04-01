@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="contact-section">
+    <h2>📁 File Upload Demo</h2>
+    <p style="color: #888; margin-bottom: 2rem;">Upload any file and Flask will save it to the server.</p>
+
+    {% if msg %}
+        <p style="color: #4ade80; margin-bottom: 1.5rem; font-size: 1rem;">{{ msg }}</p>
+    {% endif %}
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Choose a File</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <button type="submit" class="btn">Upload →</button>
+    </form>
+
+    <p style="color:#555; font-size:0.8rem; margin-top:1.5rem;">
+        ⚠️ Note: <code>enctype="multipart/form-data"</code> is required for file uploads.
+    </p>
+</section>
+
+{% endblock %}

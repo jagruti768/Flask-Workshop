@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+    <h2>🍪 Cookie Demo</h2>
+    <p class="bio">{{ msg }}</p>
+
+    <div class="skill-tags" style="margin-top: 2rem; gap: 1rem;">
+        <a href="/setcookie" class="btn">Set Cookie</a>
+        <a href="/getcookie" class="btn" style="background:#1a1a1a; color:#4ade80; border: 1px solid #4ade80;">Get Cookie</a>
+        <a href="/deletecookie" class="btn" style="background:#1a1a1a; color:#f87171; border: 1px solid #f87171;">Delete Cookie</a>
+    </div>
+</section>
+
+{% endblock %}
